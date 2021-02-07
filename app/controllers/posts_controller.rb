@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post!, only: [:show, :edit, :update]
 
+ def new 
+ end 
+ 
   def show
   end
 
@@ -13,7 +16,7 @@ class PostsController < ApplicationController
 
     redirect_to post_path(@post)
     else 
-      render :edit
+      render :edit@post)
     end 
   end
   
@@ -31,7 +34,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.permit(:category, :content, :title)
+    params.permit(:title, :category, :content)
   end
 
   def set_post!
