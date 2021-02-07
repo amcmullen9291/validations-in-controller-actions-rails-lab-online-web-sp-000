@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.valid? == 'true'
+    if @post.valid? == "true"
     @post.update(post_params)
 
     redirect_to post_path(@post)
